@@ -1,0 +1,19 @@
+<ul class="comments-list reply-list">
+  <li *ngFor="let comment of comments | async | slice:0:2">
+    <!-- Avatar -->
+    <div class="comment-avatar">
+      <img [src]="getImage(comment.email)" alt="" />
+    </div>
+    <!-- Contenedor del Comentario -->
+    <div class="comment-box">
+      <div class="comment-head">
+        <h6 class="comment-name">
+          {{comment.name}}
+        </h6>
+      </div>
+      <div class="comment-content">
+          {{comment.body}}
+      </div>
+    </div>
+  </li>
+</ul>

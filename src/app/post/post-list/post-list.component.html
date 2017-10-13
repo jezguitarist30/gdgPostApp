@@ -1,0 +1,36 @@
+<div class="container">
+      <div class="row">
+        <div class="comments-container">
+        <h1>Posts</h1>
+    
+        <ul id="comments-list" class="comments-list">
+          <li *ngFor="let post of posts | async | slice:0:4">
+            <div class="comment-main-level">
+              <!-- Avatar -->
+              <div class="comment-avatar">
+                <img src="../assets/images/user.jpg" alt="" />
+              </div>
+              <!-- Contenedor del Comentario -->
+              <div class="comment-box">
+                <div class="comment-head">
+                  <h6 class="comment-name by-author">
+                    User1
+                  </h6>
+                </div>
+                <div class="comment-content">
+                  <h3>{{post.title}}</h3>
+
+                  <br>
+
+                  {{post.body}}
+                </div>
+              </div>
+            </div>
+
+            <app-comment-list [postId]="post.id"></app-comment-list>
+
+          </li>
+        </ul>
+      </div>
+      </div>
+    </div>

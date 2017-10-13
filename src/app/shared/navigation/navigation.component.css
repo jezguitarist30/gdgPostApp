@@ -1,0 +1,25 @@
+nav {
+    background-color: #E13137;
+    color: #fff;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: #AA2B32;
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: #AA2B32;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    color: #fff;
+    background-color: #fff;
+}
+
+.navbar-default .navbar-nav>.active>a{
+    background-color: #AA2B32 !important;   
+}
+
+div.navbar-header a, ul.navbar-nav li a {
+    color: #fff;
+}
