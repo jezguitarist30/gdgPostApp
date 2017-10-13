@@ -12,9 +12,9 @@ export class ContactUsComponent implements OnInit {
 
   constructor(private _fb: FormBuilder) {
     this.form = _fb.group({
-      name: ['', Validators.compose([Validators.minLength(50), Validators.required])],
-      email: ['', Validators.compose([Validators.minLength(50), Validators.required])],
-      message: ['', Validators.compose([Validators.minLength(400), Validators.required])]
+      name: ['', Validators.compose([Validators.maxLength(50), Validators.required])],
+      email: ['', Validators.compose([Validators.maxLength(50), Validators.required])],
+      message: ['', Validators.compose([Validators.maxLength(400), Validators.required])]
     });
   }
 
