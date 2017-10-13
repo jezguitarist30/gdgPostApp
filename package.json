@@ -8,7 +8,10 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "build:all": "ng build --prod && ng build --prod --app 1",
+    "build:aot": "ng build --prod --aot && ng build --prod --aot --app 1",
+    "build:optimizer": "ng build --prod --aot --build-optimizer && ng build --prod --aot --build-optimizer --app 1"
   },
   "private": true,
   "dependencies": {
@@ -20,7 +23,9 @@
     "@angular/http": "^4.2.4",
     "@angular/platform-browser": "^4.2.4",
     "@angular/platform-browser-dynamic": "^4.2.4",
+    "@angular/platform-server": "^4.4.5",
     "@angular/router": "^4.2.4",
+    "@nguniversal/express-engine": "^1.0.0-beta.3",
     "bootstrap": "^3.3.7",
     "core-js": "^2.4.1",
     "jquery": "^3.2.1",

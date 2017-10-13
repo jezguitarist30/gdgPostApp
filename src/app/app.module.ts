@@ -23,7 +23,8 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     ContactUsComponent
   ],
   imports: [
-    BrowserModule,
+   // BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'gdg-post-app' }),
     FormsModule,
     ReactiveFormsModule,
 
