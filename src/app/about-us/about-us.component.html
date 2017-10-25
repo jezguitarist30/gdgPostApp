@@ -1,4 +1,18 @@
 <div class="jumbotron">
-  <h1>{{pageName}}</h1>
+  <h1>{{pageName | titlecase}}</h1>
   <p>We are a group of people who loves to share our knowledge to others.</p>
 </div>
+
+
+
+<button (click)="toggleShow()">
+  Toggle Element
+</button>
+
+<div *ngIf="showElement; else showOther">
+ <h1> Show Me</h1>
+</div>
+
+<ng-template #showOther>
+ <h1>Else Show This</h1>
+</ng-template>

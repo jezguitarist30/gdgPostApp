@@ -11,7 +11,7 @@ const routes: Routes = [
    { path: 'home', component: HomeComponent },
    { path: 'about-us', component: AboutUsComponent },
    { path: 'contact-us', component: ContactUsComponent },
-   { path: 'posts', loadChildren: './post/post.module#PostModule' },
+   { path: 'post', loadChildren: './post/post.module#PostModule' },
    { path: '**', component: PageNotFoundComponent }
 ];
 

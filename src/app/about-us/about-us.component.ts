@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-about-us',
@@ -9,9 +10,23 @@ export class AboutUsComponent implements OnInit {
 
   pageName = 'about us';
 
-  constructor() { }
+  showElement = false;
+
+  constructor(meta: Meta, title: Title) {
+
+    title.setTitle('Google Developer Group | ' + this.pageName);
+
+    meta.addTags([
+      { name: 'keyword', content: 'This is ' + this.pageName }
+    ]);
+
+  }
 
   ngOnInit() {
+  }
+
+  toggleShow() {
+    this.showElement = !this.showElement;
   }
 
 }
